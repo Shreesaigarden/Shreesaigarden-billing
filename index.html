@@ -1,26 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Sai Garden Billing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🌿 Shree Sai Garden</h1>
+<p>Restaurant Billing System</p>
+</header>
+
+<div class="container">
+
 <h2>Dashboard</h2>
 
 <button id="newBill">🧾 New Bill</button>
 <button id="menuBtn">🍽️ Menu</button>
 <button id="reportBtn">📊 Reports</button>
 
-<div id="billingArea" style="display:none;">
-  <h3>New Bill</h3>
+<div id="billingArea" style="display:none; margin-top:20px;">
 
-  <label>Table</label>
-  <select id="table">
-    <option>Table 1</option>
-    <option>Table 2</option>
-    <option>Table 3</option>
-    <option>Table 4</option>
-    <option>Table 5</option>
-  </select>
+<h3>New Bill</h3>
 
-  <br><br>
+<label>Select Table</label><br>
 
-  <button>Add Paneer Masala ₹180</button>
-  <button>Add Butter Roti ₹25</button>
-  <button>Add Tea ₹20</button>
+<select id="table">
+<option>Table 1</option>
+<option>Table 2</option>
+<option>Table 3</option>
+<option>Table 4</option>
+<option>Table 5</option>
+</select>
 
-  <h3>Total: ₹0</h3>
+<br><br>
+
+<button id="paneer">Paneer Masala ₹180</button>
+<button id="roti">Butter Roti ₹25</button>
+<button id="tea">Tea ₹20</button>
+
+<h2 id="total">Total ₹0</h2>
+
 </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
