@@ -1,7 +1,33 @@
-const cards = document.querySelectorAll(".card");
+const billArea = document.getElementById("billingArea");
+const newBill = document.getElementById("newBill");
 
-cards[0].onclick = () => alert("🧾 New Bill - Coming Soon");
-cards[1].onclick = () => alert("🍽️ Tables - Coming Soon");
-cards[2].onclick = () => alert("📋 Menu - Coming Soon");
-cards[3].onclick = () => alert("📊 Sales Report - Coming Soon");
-cards[4].onclick = () => alert("⚙️ Settings - Coming Soon");
+let total = 0;
+
+newBill.addEventListener("click", () => {
+    billArea.style.display = "block";
+});
+
+const buttons = document.querySelectorAll("#billingArea button");
+
+buttons.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        if(btn.innerText.includes("Paneer")){
+            total += 180;
+        }
+
+        if(btn.innerText.includes("Butter")){
+            total += 25;
+        }
+
+        if(btn.innerText.includes("Tea")){
+            total += 20;
+        }
+
+        document.querySelector("#billingArea h3:last-child").innerHTML =
+        "Total : ₹" + total;
+
+    });
+
+});
